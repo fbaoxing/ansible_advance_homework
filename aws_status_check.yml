@@ -1,4 +1,4 @@
-- hosts: tag_instance_filter_three_tier_app_psrivast_redhat_com
+- hosts: tag_instance_filter_three_tier_app_baoxing_feng_farben_com_cn
   gather_facts: false
   tasks:
   - name: Check the instances status
