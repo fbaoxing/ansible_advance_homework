@@ -1,10 +1,24 @@
 ---
 
 # tasks file for osp.servers
-- name: Create new server instances and attaches them a network and passes metadata to the instance
 
+- name: instance frontend
+  include: ospinstance.yml
+  vars:
+    myinstance: "{{osp_servers.frontend}}"
 
-- name: Add floating IP to Servers
-   
+- name: instance app1
+  include: ospinstance.yml
+  vars:
+    myinstance: "{{osp_servers.app1}}"
 
-- name: Wait for server to be available
+- name: instance app2
+  include: ospinstance.yml
+  vars:
+    myinstance: "{{osp_servers.app2}}"
+
+- name: instance db
+  include: ospinstance.yml
+  vars:
+    myinstance: "{{osp_servers.db}}"
+
